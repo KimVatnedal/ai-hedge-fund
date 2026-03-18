@@ -109,6 +109,9 @@ LLM_ORDER = [model.to_choice_tuple() for model in AVAILABLE_MODELS]
 # Create Ollama LLM_ORDER separately
 OLLAMA_LLM_ORDER = [model.to_choice_tuple() for model in OLLAMA_MODELS]
 
+# MLX LM (Apple Silicon local inference) — not available on Linux; stub for import compatibility
+MLX_LLM_ORDER: list = []
+
 
 def get_model_info(model_name: str, model_provider: str) -> LLMModel | None:
     """Get model information by model_name"""
